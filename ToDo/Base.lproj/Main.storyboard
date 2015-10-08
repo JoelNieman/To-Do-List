@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,6 +41,9 @@
                                 <state key="normal" title="Update">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nuM-dx-vOb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1I-vu-CKn">
                                 <rect key="frame" x="460" y="530" width="120" height="50"/>
@@ -53,37 +56,35 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bb6-TA-s3W">
-                                <rect key="frame" x="20" y="20" width="560" height="354"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bb6-TA-s3W">
+                                <rect key="frame" x="20" y="20" width="560" height="355"/>
                                 <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qT2-R1-VhO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Oo2-0F-FdC"/>
+                                </connections>
                             </tableView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Item to Update:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ST4-CS-VDC">
-                                <rect key="frame" x="20" y="394" width="120" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item to Update:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ST4-CS-VDC">
+                                <rect key="frame" x="20" y="395" width="119" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37k-bM-TQh">
-                                <rect key="frame" x="148" y="390" width="97" height="30"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37k-bM-TQh">
+                                <rect key="frame" x="147" y="391" width="62" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert updated text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DW9-Iw-Zjk">
-                                <rect key="frame" x="129" y="427" width="451" height="30"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert updated text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DW9-Iw-Zjk">
+                                <rect key="frame" x="122.5" y="428" width="176.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Update Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25K-le-0eZ">
-                                <rect key="frame" x="20" y="431" width="101" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25K-le-0eZ">
+                                <rect key="frame" x="20" y="431.5" width="94.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item to Delete:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eri-G5-CZ9">
-                                <rect key="frame" x="20" y="394" width="120" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -109,15 +110,21 @@
                             <constraint firstItem="DW9-Iw-Zjk" firstAttribute="top" secondItem="37k-bM-TQh" secondAttribute="bottom" constant="7" id="xaD-aL-k5f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemNumberInput" destination="37k-bM-TQh" id="f66-wd-vFd"/>
+                        <outlet property="itemNumberLabel" destination="ST4-CS-VDC" id="ePw-C3-Mgg"/>
+                        <outlet property="itemUpdateInput" destination="DW9-Iw-Zjk" id="zlz-ud-Io5"/>
+                        <outlet property="itemUpdateLabel" destination="25K-le-0eZ" id="0IY-Jr-RQf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="215" y="313"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="BJt-Ib-avx">
             <objects>
-                <viewController id="s5b-xo-RiD" sceneMemberID="viewController">
+                <viewController id="s5b-xo-RiD" customClass="TableViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L4l-Gi-Zac"/>
                         <viewControllerLayoutGuide type="bottom" id="Mc1-AA-fDY"/>
@@ -137,16 +144,31 @@
                                     <constraint firstAttribute="height" constant="50" id="ZqV-cs-Lk4"/>
                                     <constraint firstAttribute="width" constant="120" id="pr5-ck-MfD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="20"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="ZnO-gv-PQV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOX-ag-2Cf">
-                                <rect key="frame" x="19.5" y="333.5" width="106" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUt-3w-nlY">
+                                <rect key="frame" x="225" y="435" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Yf4-T0-p8E"/>
+                                    <constraint firstAttribute="height" constant="60" id="zWX-Pb-e7V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="25"/>
+                                <state key="normal" title="Add Action">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addActionButton:" destination="s5b-xo-RiD" eventType="touchUpInside" id="hSk-uY-wi3"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Qfs-Lg-qk8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Action:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOX-ag-2Cf">
+                                <rect key="frame" x="20" y="337.5" width="111.5" height="27.5"/>
                                 <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -156,7 +178,9 @@
                         <constraints>
                             <constraint firstItem="26c-dF-1ff" firstAttribute="top" secondItem="zOX-ag-2Cf" secondAttribute="bottom" constant="8" id="7rP-iY-wio"/>
                             <constraint firstItem="Mc1-AA-fDY" firstAttribute="top" secondItem="26c-dF-1ff" secondAttribute="bottom" constant="197" id="8JO-Qu-Ety"/>
+                            <constraint firstItem="Mc1-AA-fDY" firstAttribute="top" secondItem="xUt-3w-nlY" secondAttribute="bottom" constant="105" id="P74-FW-8Mm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="zOX-ag-2Cf" secondAttribute="leading" id="QGG-bW-Dw7"/>
+                            <constraint firstItem="xUt-3w-nlY" firstAttribute="centerX" secondItem="Udi-ZB-8Fc" secondAttribute="centerX" id="W6M-KW-ax5"/>
                             <constraint firstItem="h5P-vt-SS4" firstAttribute="leading" secondItem="Udi-ZB-8Fc" secondAttribute="leadingMargin" constant="6" id="Y7o-hW-ay7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="26c-dF-1ff" secondAttribute="leading" id="e75-xU-unC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h5P-vt-SS4" secondAttribute="trailing" constant="520" id="f3u-BF-6gj"/>
@@ -169,10 +193,16 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="userItemInput" destination="26c-dF-1ff" id="oNA-Vs-HsK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lak-ZR-gY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="912" y="313"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZnO-gv-PQV"/>
+    </inferredMetricsTieBreakers>
 </document>
