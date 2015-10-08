@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		5DBEF7021BC5C19400A4C448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEF7011BC5C19400A4C448 /* AppDelegate.swift */; };
 		5DBEF7041BC5C19400A4C448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEF7031BC5C19400A4C448 /* ViewController.swift */; };
-		5DBEF7071BC5C19400A4C448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBEF7051BC5C19400A4C448 /* Main.storyboard */; };
 		5DBEF7091BC5C19400A4C448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBEF7081BC5C19400A4C448 /* Assets.xcassets */; };
 		5DBEF70C1BC5C19400A4C448 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBEF70A1BC5C19400A4C448 /* LaunchScreen.storyboard */; };
 		5DBEF7171BC5C19400A4C448 /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEF7161BC5C19400A4C448 /* ToDoTests.swift */; };
 		5DBEF7221BC5C19400A4C448 /* ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEF7211BC5C19400A4C448 /* ToDoUITests.swift */; };
+		5DBEF7301BC5C56400A4C448 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEF72F1BC5C56400A4C448 /* ToDo.swift */; settings = {ASSET_TAGS = (); }; };
+		5DBEF7331BC5E17700A4C448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBEF7311BC5E17700A4C448 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 		5DBEF6FE1BC5C19400A4C448 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBEF7011BC5C19400A4C448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DBEF7031BC5C19400A4C448 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5DBEF7061BC5C19400A4C448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DBEF7081BC5C19400A4C448 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DBEF70B1BC5C19400A4C448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DBEF70D1BC5C19400A4C448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		5DBEF71D1BC5C19400A4C448 /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBEF7211BC5C19400A4C448 /* ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITests.swift; sourceTree = "<group>"; };
 		5DBEF7231BC5C19400A4C448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DBEF72F1BC5C56400A4C448 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		5DBEF7321BC5E17700A4C448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +101,11 @@
 			children = (
 				5DBEF7011BC5C19400A4C448 /* AppDelegate.swift */,
 				5DBEF7031BC5C19400A4C448 /* ViewController.swift */,
-				5DBEF7051BC5C19400A4C448 /* Main.storyboard */,
 				5DBEF7081BC5C19400A4C448 /* Assets.xcassets */,
+				5DBEF7311BC5E17700A4C448 /* Main.storyboard */,
 				5DBEF70A1BC5C19400A4C448 /* LaunchScreen.storyboard */,
 				5DBEF70D1BC5C19400A4C448 /* Info.plist */,
+				5DBEF72F1BC5C56400A4C448 /* ToDo.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -228,9 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DBEF7331BC5E17700A4C448 /* Main.storyboard in Resources */,
 				5DBEF70C1BC5C19400A4C448 /* LaunchScreen.storyboard in Resources */,
 				5DBEF7091BC5C19400A4C448 /* Assets.xcassets in Resources */,
-				5DBEF7071BC5C19400A4C448 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DBEF7301BC5C56400A4C448 /* ToDo.swift in Sources */,
 				5DBEF7041BC5C19400A4C448 /* ViewController.swift in Sources */,
 				5DBEF7021BC5C19400A4C448 /* AppDelegate.swift in Sources */,
 			);
@@ -292,20 +296,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5DBEF7051BC5C19400A4C448 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DBEF7061BC5C19400A4C448 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5DBEF70A1BC5C19400A4C448 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5DBEF70B1BC5C19400A4C448 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5DBEF7311BC5E17700A4C448 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DBEF7321BC5E17700A4C448 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -481,6 +485,7 @@
 				5DBEF7281BC5C19400A4C448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DBEF7291BC5C19400A4C448 /* Build configuration list for PBXNativeTarget "ToDoTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				5DBEF72B1BC5C19400A4C448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DBEF72C1BC5C19400A4C448 /* Build configuration list for PBXNativeTarget "ToDoUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +503,7 @@
 				5DBEF72E1BC5C19400A4C448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
