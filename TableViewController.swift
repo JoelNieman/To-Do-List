@@ -20,6 +20,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var itemUpdateInput: UITextField!
 
     @IBOutlet weak var userItemInput: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var updateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad() }
@@ -54,8 +56,19 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func updateButtonPressed(sender: AnyObject) {
         itemNumberInput.hidden = false
         itemNumberLabel.hidden = false
-    
+        itemUpdateLabel.hidden = false
+        itemUpdateInput.hidden = false
+        submitButton.hidden = false
+        updateButton.hidden = true
     }
-    
 
+    @IBAction func submitButtonPressed(sender: AnyObject) {
+        itemNumberInput.hidden = true
+        itemNumberLabel.hidden = true
+        itemUpdateLabel.hidden = true
+        itemUpdateInput.hidden = true
+        submitButton.hidden = true
+        updateButton.hidden = false
+        
+    }
 }

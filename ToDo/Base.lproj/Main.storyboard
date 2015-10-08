@@ -87,15 +87,35 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVc-T5-kPd">
+                                <rect key="frame" x="240" y="530" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="8zx-sr-P8Z"/>
+                                    <constraint firstAttribute="height" constant="50" id="dJp-0r-ClF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="25"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTv-8C-BDL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="qVc-T5-kPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0QS-x4-owW"/>
                             <constraint firstItem="Bb6-TA-s3W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Jt-N2-E5i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qVc-T5-kPd" secondAttribute="trailing" id="BXl-Gz-y9y"/>
                             <constraint firstItem="37k-bM-TQh" firstAttribute="top" secondItem="Bb6-TA-s3W" secondAttribute="bottom" constant="16" id="C0H-aZ-5j4"/>
+                            <constraint firstItem="qVc-T5-kPd" firstAttribute="top" secondItem="Bb6-TA-s3W" secondAttribute="bottom" constant="16" id="Eg0-So-y7I"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rxo-Tc-sB0" secondAttribute="bottom" constant="20" id="GtE-jC-dSq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="25K-le-0eZ" secondAttribute="leading" id="GuF-VJ-8Nd"/>
                             <constraint firstItem="25K-le-0eZ" firstAttribute="top" secondItem="ST4-CS-VDC" secondAttribute="bottom" constant="16" id="IBz-DM-Y3b"/>
+                            <constraint firstItem="rxo-Tc-sB0" firstAttribute="top" secondItem="qVc-T5-kPd" secondAttribute="bottom" constant="15" id="IFg-yV-ySj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K1I-vu-CKn" secondAttribute="trailing" id="JGU-Rt-bH6"/>
+                            <constraint firstItem="qVc-T5-kPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LKh-g3-BJU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qVc-T5-kPd" secondAttribute="bottom" constant="20" id="LP1-Wt-rmH"/>
                             <constraint firstItem="ST4-CS-VDC" firstAttribute="top" secondItem="Bb6-TA-s3W" secondAttribute="bottom" constant="20" id="MXg-C3-v3o"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K1I-vu-CKn" secondAttribute="bottom" constant="20" id="Tac-iR-Lc7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Bb6-TA-s3W" secondAttribute="leading" id="Uiw-z1-K2a"/>
@@ -109,12 +129,21 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ww0-aL-wcU" secondAttribute="bottom" constant="20" id="tow-1m-AwI"/>
                             <constraint firstItem="DW9-Iw-Zjk" firstAttribute="top" secondItem="37k-bM-TQh" secondAttribute="bottom" constant="7" id="xaD-aL-k5f"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BXl-Gz-y9y"/>
+                                <exclude reference="Eg0-So-y7I"/>
+                                <exclude reference="IFg-yV-ySj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="itemNumberInput" destination="37k-bM-TQh" id="f66-wd-vFd"/>
                         <outlet property="itemNumberLabel" destination="ST4-CS-VDC" id="ePw-C3-Mgg"/>
                         <outlet property="itemUpdateInput" destination="DW9-Iw-Zjk" id="zlz-ud-Io5"/>
                         <outlet property="itemUpdateLabel" destination="25K-le-0eZ" id="0IY-Jr-RQf"/>
+                        <outlet property="submitButton" destination="qVc-T5-kPd" id="Mg9-R5-Thp"/>
+                        <outlet property="updateButton" destination="rxo-Tc-sB0" id="yNd-3G-dmx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
